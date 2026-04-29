@@ -90,56 +90,5 @@
   color: var(--primary-text);
 }
 
-@media (max-width: 768px) {
-  .header {
-    padding: 0.8rem 0;
-  }
 
-  .logo-img {
-    height: 40px;
-  }
-
-  .menu-toggle {
-    display: block;
-    z-index: 1001;
-    position: relative;
-    background: none;
-    border: none;
-    padding: 0.3rem;
-    color: var(--white);
-    opacity: 0.8;
-    transition: var(--transition-smooth);
-  }
-
-  .menu-toggle:hover {
-    opacity: 1;
-  }
-
-  .nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    max-width: 300px;
-    height: 100vh;
-    background-color: rgba(11, 11, 11, 0.95);
-    backdrop-filter: blur(30px);
-    padding: 6rem 2rem;
-    transition: var(--transition-smooth);
-    box-shadow: -10px 0 40px rgba(0, 0, 0, 0.6);
-    border-left: 1px solid rgba(255, 255, 255, 0.04);
-  }
-
-  .nav-open {
-    right: 0;
-  }
-
-  .nav-list {
-    flex-direction: column;
-    gap: 2rem;
-  }
-
-  .header:not(.scrolled) .nav-list a {
-    color: var(--primary-text);
-  }
-}
+/* Mobile media queries removed — fixed 1280px desktop viewport */

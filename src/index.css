@@ -42,12 +42,13 @@
 
 html {
   scroll-behavior: smooth;
-  min-width: 320px;
+  min-width: 1280px;
+  font-size: 17px;
 }
 
 body {
   font-family: var(--font-body);
-  overflow-x: auto;
+  overflow-x: hidden;
   color: var(--primary-text);
   background-color: var(--bg-deep);
   /* Layered dark mesh gradient with warm amber accent */
@@ -201,41 +202,4 @@ button {
   box-shadow: var(--glass-shadow);
   border-radius: 16px;
   padding: 3rem;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .container {
-    padding: 0 1.25rem;
-  }
-  .section-padding {
-    padding: 3.5rem 0;
-  }
-  .section-title {
-    font-size: 1.6rem;
-    margin-bottom: 0.75rem;
-  }
-  .section-subtitle {
-    font-size: 0.95rem;
-    margin-bottom: 2.5rem;
-    padding: 0 0.5rem;
-  }
-  .glass-panel {
-    padding: 1.5rem;
-    border-radius: 12px;
-  }
-  .btn-primary,
-  .btn-outline {
-    padding: 0.85rem 2rem;
-    font-size: 0.9rem;
-    width: 100%;
-    text-align: center;
-  }
-}
-
-/* Safety: lock base font-size so desktop layout renders cleanly on simulated viewports */
-@media (min-width: 993px) {
-  html {
-    font-size: 16px;
-  }
 }
