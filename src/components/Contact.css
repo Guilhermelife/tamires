@@ -336,7 +336,48 @@
 }
 
 /* ============================================================
-   RESPONSIVE
+   RESPONSIVE — MOBILE (Luxury Flow)
    ============================================================ */
+@media (max-width: 992px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 4rem;
+  }
+  
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .contact-form input,
+  .contact-form select,
+  .contact-form textarea {
+    min-height: 56px; /* h-14 */
+    font-size: 1rem;
+    padding-left: 1.25rem;
+  }
+  
+  .submit-btn {
+    min-height: 56px; /* h-14 */
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .contact-map-wrapper {
+    margin-top: 2rem;
+  }
+  
+  .contact .reveal-left,
+  .contact .reveal-right {
+    transform: translateY(30px);
+  }
+  
+  .contact .reveal-left.revealed,
+  .contact .reveal-right.revealed {
+    transform: translateY(0);
+  }
+}
 
-/* Mobile media queries removed — fixed 1280px desktop viewport */

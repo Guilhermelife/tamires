@@ -251,4 +251,56 @@
   50% { transform: scaleY(1.4); opacity: 1; }
 }
 
-/* Mobile media queries removed — fixed 1280px desktop viewport */
+/* ============================================================
+   RESPONSIVE — MOBILE (Luxury Flow)
+   ============================================================ */
+@media (max-width: 992px) {
+  .hero {
+    height: 100svh;
+    min-height: -webkit-fill-available;
+  }
+  
+  .hero-bg {
+    object-position: 80% center;
+  }
+  
+  .hero-overlay {
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 30%, transparent 100%);
+  }
+  
+  .hero-container {
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 80px; /* Base padding */
+    padding-left: 1.5rem; /* px-6 equivalent */
+    padding-right: 1.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .hero-text-col {
+    width: 100%;
+    align-items: center;
+  }
+  
+  .hero-empty-col {
+    display: none;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .hero-subtitle {
+    font-size: 1rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .hero-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}

@@ -42,8 +42,8 @@
 
 html {
   scroll-behavior: smooth;
-  min-width: 1280px;
-  font-size: 17px;
+  min-width: 320px;
+  font-size: 16px;
 }
 
 body {
@@ -202,4 +202,45 @@ button {
   box-shadow: var(--glass-shadow);
   border-radius: 16px;
   padding: 3rem;
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (Luxury Flow)
+   ============================================================ */
+@media (max-width: 992px) {
+  html {
+    font-size: 16px;
+  }
+  
+  .container {
+    padding: 0 1.5rem;
+  }
+  
+  .section-padding {
+    padding: 4rem 0; /* min 64px padding */
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 3rem;
+    padding: 0;
+  }
+  
+  .glass-panel {
+    padding: 2rem 1.5rem;
+    border-radius: 14px;
+  }
+  
+  .btn-primary,
+  .btn-outline {
+    padding: 1rem 2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
 }

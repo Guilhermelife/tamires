@@ -68,6 +68,7 @@ const Contact: React.FC = () => {
                   <div>
                     <h4>Endereço</h4>
                     <p>Paraíso do Tocantins - TO</p>
+                    <p className="address-note" style={{ fontSize: '0.8rem', color: 'var(--accent-warm)', marginTop: '2px' }}>Próximo à Caixa Econômica do Centro</p>
                   </div>
                 </a>
 

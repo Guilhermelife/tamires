@@ -443,7 +443,44 @@
 }
 
 /* ============================================================
-   RESPONSIVE — MOBILE (Moodboard Editorial)
+   RESPONSIVE — MOBILE (Luxury Flow)
    ============================================================ */
+@media (max-width: 992px) {
+  .portfolio-filters {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .portfolio-filters::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .filter-btn {
+    white-space: nowrap;
+    padding: 0.5rem 1rem;
+  }
+  
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .portfolio-card {
+    height: 400px;
+  }
+  
+  .portfolio-card.tall,
+  .portfolio-card.wide {
+    height: 400px;
+    grid-column: span 1;
+    grid-row: span 1;
+  }
+}
+
 
 /* Mobile media queries removed — fixed 1280px desktop viewport */
