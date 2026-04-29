@@ -42,10 +42,12 @@
 
 html {
   scroll-behavior: smooth;
+  min-width: 320px;
 }
 
 body {
   font-family: var(--font-body);
+  overflow-x: auto;
   color: var(--primary-text);
   background-color: var(--bg-deep);
   /* Layered dark mesh gradient with warm amber accent */
@@ -104,6 +106,7 @@ button {
 
 .container {
   max-width: 1200px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -227,5 +230,12 @@ button {
     font-size: 0.9rem;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* Safety: lock base font-size so desktop layout renders cleanly on simulated viewports */
+@media (min-width: 993px) {
+  html {
+    font-size: 16px;
   }
 }
