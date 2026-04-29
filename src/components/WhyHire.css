@@ -1,0 +1,318 @@
+/* ==========================================================
+   WHY HIRE — High-Impact Conversion Block
+   Shares construction background with About — seamless flow
+   ========================================================== */
+
+.why-hire {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  background-color: var(--bg-deep);
+  background-image: url('/construction-bg.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  padding: 0;
+}
+
+/* Dark overlay — matches About */
+.why-hire-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    160deg,
+    rgba(11, 11, 11, 0.9) 0%,
+    rgba(11, 11, 11, 0.82) 100%
+  );
+  backdrop-filter: blur(4px);
+  z-index: 0;
+}
+
+/* Thin gold divider at top — visual separation from About */
+.why-hire::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent-warm), transparent);
+  z-index: 2;
+}
+
+/* Inner wrapper — full viewport centering */
+.why-hire-inner {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 0;
+}
+
+/* ---- Grid: 45% text / 55% image ---- */
+.why-hire-container {
+  display: grid;
+  grid-template-columns: 45fr 55fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+}
+
+/* ============================================================
+   TEXT COLUMN
+   ============================================================ */
+.why-hire-text-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* Kicker — eyebrow text */
+.why-hire-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.why-hire-kicker::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--accent-warm);
+}
+
+/* Title — large focal point */
+.why-hire-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 2rem;
+  letter-spacing: -0.3px;
+}
+
+/* Paragraphs */
+.why-hire-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.why-hire-paragraphs p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+  margin: 0;
+}
+
+/* CTA Button — the most clickable element */
+.why-hire-cta {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--accent-gold);
+  color: var(--btn-text);
+  padding: 1rem 3rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.3px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shine sweep */
+.why-hire-cta::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.2) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.why-hire-cta:hover::before {
+  left: 100%;
+}
+
+.why-hire-cta:hover {
+  background-color: #fff;
+  color: var(--btn-text);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(232, 216, 200, 0.25);
+}
+
+/* ============================================================
+   IMAGE COLUMN
+   ============================================================ */
+.why-hire-image-col {
+  position: relative;
+}
+
+.why-hire-img-wrapper {
+  position: relative;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+/* Subtle dark glow behind image */
+.why-hire-img-wrapper::before {
+  content: '';
+  position: absolute;
+  inset: -20px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(200, 169, 106, 0.06) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.why-hire-img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  border-radius: 24px;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.why-hire-img-wrapper:hover .why-hire-img {
+  transform: scale(1.02);
+}
+
+/* ============================================================
+   SCROLL REVEAL (reuse from About)
+   ============================================================ */
+.why-hire .reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.why-hire .reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+
+.why-hire .reveal-left.revealed,
+.why-hire .reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 992px) {
+  .why-hire-inner {
+    min-height: auto;
+    padding: 3.5rem 0;
+  }
+
+  .why-hire-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  /* On mobile: image first, text second */
+  .why-hire-text-col {
+    order: 2;
+    align-items: center;
+    text-align: center;
+  }
+
+  .why-hire-image-col {
+    order: 1;
+  }
+
+  .why-hire-kicker {
+    justify-content: center;
+  }
+
+  .why-hire-kicker::before {
+    display: none;
+  }
+
+  .why-hire-title {
+    font-size: 2rem;
+  }
+
+  .why-hire-paragraphs p {
+    font-size: 0.9rem;
+  }
+
+  .why-hire-cta {
+    width: 100%;
+    text-align: center;
+    padding: 0.95rem 2.5rem;
+    font-size: 0.9rem;
+  }
+
+  .why-hire-img {
+    height: 380px;
+    border-radius: 16px;
+  }
+
+  .why-hire-img-wrapper {
+    border-radius: 16px;
+  }
+
+  /* Fade-up instead of slide on mobile */
+  .why-hire .reveal-left,
+  .why-hire .reveal-right {
+    transform: translateY(30px);
+    transition-delay: 0s;
+  }
+
+  .why-hire .reveal-left.revealed,
+  .why-hire .reveal-right.revealed {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .why-hire-inner {
+    padding: 2.5rem 0;
+  }
+
+  .why-hire-img {
+    height: 300px;
+  }
+
+  .why-hire-title {
+    font-size: 1.7rem;
+  }
+}

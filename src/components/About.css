@@ -1,0 +1,458 @@
+/* ==========================================================
+   ABOUT — "A Arquiteta" — High-End Architecture Style
+   ========================================================== */
+
+.about {
+  position: relative;
+  background-color: var(--bg-deep);
+  background-image: url('/construction-bg.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  overflow: hidden;
+  color: var(--white);
+  /* NO bottom padding — flows into WhyHire */
+  padding: 0;
+}
+
+.about-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    160deg,
+    rgba(11, 11, 11, 0.9) 0%,
+    rgba(11, 11, 11, 0.82) 100%
+  );
+  backdrop-filter: blur(4px);
+  z-index: 1;
+}
+
+/* Inner wrapper for vertical centering + full viewport height */
+.about-inner {
+  position: relative;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 0 4rem;
+}
+
+.relative {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---- Grid Layout ---- */
+.about-container {
+  display: grid;
+  grid-template-columns: 5fr 6fr;
+  gap: 5rem;
+  align-items: center;
+  max-width: 1200px;
+}
+
+/* ============================================================
+   IMAGE SIDE
+   ============================================================ */
+.about-image-wrapper {
+  position: relative;
+}
+
+.about-image {
+  width: 100%;
+  height: 580px;
+  border-radius: 18px;
+  object-fit: cover;
+  object-position: center top;
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-image-wrapper:hover .about-image {
+  transform: translateY(-6px);
+}
+
+/* Glassmorphism Badge */
+.about-experience-badge {
+  position: absolute;
+  bottom: -16px;
+  right: -16px;
+  background: rgba(11, 11, 11, 0.55);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  transition: transform 0.4s ease;
+}
+
+.about-image-wrapper:hover .about-experience-badge {
+  transform: translateY(-4px);
+}
+
+.badge-number {
+  color: var(--accent-warm);
+  font-family: var(--font-heading);
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.badge-text {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  margin-top: 0.5rem;
+  font-weight: 400;
+}
+
+/* ============================================================
+   TEXT SIDE
+   ============================================================ */
+.about-content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Kicker — small label above title */
+.about-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.about-kicker::before {
+  content: '';
+  width: 30px;
+  height: 1px;
+  background: var(--accent-warm);
+}
+
+/* Title — Serif elegance */
+.about-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 2rem;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+/* Body text */
+.about-text p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.15px;
+}
+
+/* Blockquote — accent bar + italic */
+.about-quote {
+  position: relative;
+  padding: 1.5rem 0 1.5rem 2rem;
+  margin: 1.5rem 0;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+.about-quote::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    var(--accent-warm),
+    rgba(200, 169, 106, 0.15)
+  );
+  border-radius: 2px;
+}
+
+/* Button — outline with fill-on-hover */
+.about-btn {
+  align-self: flex-start;
+  padding: 0.9rem 2.5rem;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  font-weight: 500;
+  transition: var(--transition-smooth);
+  margin-top: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Shine sweep on hover */
+.about-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(200, 169, 106, 0.08) 50%,
+    transparent 100%
+  );
+  transition: left 0.5s ease;
+}
+
+.about-btn:hover::before {
+  left: 100%;
+}
+
+.about-btn:hover {
+  background-color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  color: var(--btn-text);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(200, 169, 106, 0.2);
+}
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIONS
+   ============================================================ */
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s,
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.15s;
+}
+
+.reveal-left.revealed,
+.reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   RESPONSIVE — MOBILE (Editorial Flow)
+   ============================================================ */
+@media (max-width: 992px) {
+  .about-inner {
+    min-height: auto;
+    padding: 3rem 0 5rem;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  /* ---- IMAGE: aspect-ratio portrait, no fixed height ---- */
+  .about-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: center;
+    /* Soft top corners only */
+    border-radius: 12px 12px 4px 4px;
+    box-shadow:
+      0 16px 50px rgba(0, 0, 0, 0.4),
+      0 0 0 1px rgba(255, 255, 255, 0.03);
+  }
+
+  .about-image-wrapper:hover .about-image {
+    transform: none;
+  }
+
+  /* ---- BADGE: Circular glassmorphism seal ---- */
+  .about-experience-badge {
+    position: absolute;
+    bottom: 12px;
+    right: 12px;
+    width: 64px;
+    height: 64px;
+    padding: 0;
+    border-radius: 50%;
+    background: rgba(11, 11, 11, 0.35);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow:
+      0 6px 20px rgba(0, 0, 0, 0.3),
+      inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+
+  .badge-number {
+    font-size: 1.15rem;
+    line-height: 1;
+  }
+
+  .badge-text {
+    font-size: 0.38rem;
+    letter-spacing: 1.5px;
+    margin-top: 2px;
+    text-align: center;
+    line-height: 1.1;
+  }
+
+  .about-image-wrapper:hover .about-experience-badge {
+    transform: none;
+  }
+
+  /* ---- KICKER: Luxury label ---- */
+  .about-kicker {
+    font-size: 0.6rem;
+    letter-spacing: 0.2em;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    justify-content: flex-start;
+    color: var(--accent-warm);
+  }
+
+  .about-kicker::before {
+    width: 18px;
+  }
+
+  /* ---- TITLE: Moderate serif, generous spacing ---- */
+  .about-title {
+    font-size: 1.9rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+
+  /* ---- BODY TEXT: Shorter paragraphs, wider line-height ---- */
+  .about-text p {
+    font-size: 0.86rem;
+    line-height: 1.8;
+    margin-bottom: 0.75rem;
+  }
+
+  /* ---- BLOCKQUOTE: Graphite bg + thin gold border ---- */
+  .about-quote {
+    font-size: 0.86rem;
+    padding: 1.1rem 1rem 1.1rem 1.3rem;
+    margin: 1rem 0 1.2rem;
+    /* Deep graphite background — separates biography from philosophy */
+    background: rgba(30, 30, 30, 0.6);
+    border-radius: 0 8px 8px 0;
+    line-height: 1.75;
+    opacity: 0.92;
+  }
+
+  .about-quote::before {
+    width: 2px;
+    border-radius: 2px;
+  }
+
+  /* ---- BUTTON: Full width ---- */
+  .about-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.9rem 2rem;
+    margin-top: 1rem;
+  }
+
+  /* ---- ANIMATIONS: Fade up on mobile ---- */
+  .reveal-left,
+  .reveal-right {
+    transform: translateY(28px);
+    transition-delay: 0s;
+  }
+
+  .reveal-left.revealed,
+  .reveal-right.revealed {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .about-inner {
+    padding: 2.5rem 0 4rem;
+  }
+
+  .about-container {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .about-image {
+    aspect-ratio: 3 / 4;
+    border-radius: 10px 10px 3px 3px;
+  }
+
+  .about-experience-badge {
+    width: 56px;
+    height: 56px;
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .badge-number {
+    font-size: 1rem;
+  }
+
+  .badge-text {
+    font-size: 0.35rem;
+    letter-spacing: 1px;
+  }
+
+  .about-kicker {
+    margin-top: 1.5rem;
+  }
+
+  .about-title {
+    font-size: 1.7rem;
+  }
+
+  .about-text p {
+    font-size: 0.83rem;
+  }
+
+  .about-quote {
+    font-size: 0.83rem;
+    padding: 1rem 0.9rem 1rem 1.2rem;
+  }
+}

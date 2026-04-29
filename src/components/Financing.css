@@ -1,0 +1,526 @@
+/* ==========================================================
+   FINANCING — High-Value Process Layout
+   ========================================================== */
+
+.financing {
+  position: relative;
+  color: var(--white);
+  overflow: hidden;
+  background-color: var(--bg-deep);
+  padding: 0;
+}
+
+/* Inner wrapper — full viewport centering */
+.financing-inner {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 6rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ============================================================
+   HEADER — centered above grid
+   ============================================================ */
+.financing-header {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.financing-kicker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  color: var(--accent-warm);
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+
+.financing-kicker::before,
+.financing-kicker::after {
+  content: '';
+  width: 35px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 106, 0.5));
+}
+
+.financing-kicker::after {
+  background: linear-gradient(90deg, rgba(200, 169, 106, 0.5), transparent);
+}
+
+.financing-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--white);
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
+}
+
+.financing-subtitle {
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+/* ============================================================
+   GRID — 40/60 split
+   ============================================================ */
+.financing-grid {
+  display: grid;
+  grid-template-columns: 40fr 60fr;
+  gap: 5rem;
+  align-items: start;
+}
+
+/* ============================================================
+   LEFT COLUMN — Authority / Info
+   ============================================================ */
+.financing-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.financing-icon-main {
+  color: var(--accent-warm);
+  margin-bottom: 1.5rem;
+  opacity: 0.7;
+}
+
+.financing-info-title {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  line-height: 1.2;
+  font-weight: 600;
+  margin-bottom: 1.2rem;
+}
+
+/* CAIXA word highlight — gold underline */
+.caixa-highlight {
+  color: var(--accent-warm);
+  position: relative;
+  display: inline-block;
+}
+
+.caixa-highlight::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-warm), rgba(200, 169, 106, 0.2));
+  border-radius: 2px;
+}
+
+.financing-divider {
+  width: 50px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent-warm), transparent);
+  margin-bottom: 1.5rem;
+}
+
+.financing-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-bottom: 2rem;
+}
+
+.financing-paragraphs p {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.95rem;
+  line-height: 1.8;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* CTA — pulse animation */
+.financing-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--accent-gold);
+  color: var(--btn-text);
+  padding: 1rem 2.5rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  transition: var(--transition-smooth);
+  text-decoration: none;
+  margin-bottom: 3rem;
+  position: relative;
+  overflow: hidden;
+  align-self: flex-start;
+  animation: ctaPulse 3s ease-in-out infinite;
+}
+
+@keyframes ctaPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(232, 216, 200, 0); }
+  50% { box-shadow: 0 0 0 8px rgba(232, 216, 200, 0.08); }
+}
+
+.financing-cta:hover {
+  background: #fff;
+  color: var(--btn-text);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(232, 216, 200, 0.25);
+  animation: none;
+}
+
+/* Features — at the bottom of left column */
+.financing-features {
+  display: flex;
+  gap: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.04);
+  padding-top: 2rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+}
+
+.feature-icon {
+  color: var(--accent-warm);
+  margin-top: 2px;
+  opacity: 0.6;
+  flex-shrink: 0;
+}
+
+.feature-item h4 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 0.2rem;
+  letter-spacing: 0.3px;
+}
+
+.feature-item p {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.35);
+  line-height: 1.4;
+  margin: 0;
+}
+
+/* ============================================================
+   RIGHT COLUMN — Vertical Timeline
+   ============================================================ */
+.financing-timeline {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+/* Gold-to-transparent gradient line */
+.timeline-line {
+  position: absolute;
+  top: 24px;
+  bottom: 24px;
+  left: 42px;
+  width: 1px;
+  background: linear-gradient(
+    to bottom,
+    rgba(200, 169, 106, 0.6) 0%,
+    rgba(200, 169, 106, 0.15) 60%,
+    rgba(200, 169, 106, 0.03) 100%
+  );
+  z-index: 1;
+}
+
+.timeline-step {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.8rem;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-dot-wrapper {
+  position: relative;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-deep);
+  margin-right: 1.5rem;
+  flex-shrink: 0;
+}
+
+.timeline-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: var(--accent-warm);
+  box-shadow: 0 0 10px 3px rgba(200, 169, 106, 0.12);
+  transition: var(--transition-smooth);
+}
+
+.timeline-step:hover .timeline-dot {
+  transform: scale(1.8);
+  box-shadow: 0 0 20px 8px rgba(200, 169, 106, 0.3);
+}
+
+/* Glassmorphism Cards */
+.timeline-card {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 1.3rem 1.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-step:hover .timeline-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(200, 169, 106, 0.15);
+  transform: translateX(6px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 1px solid rgba(200, 169, 106, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent-warm);
+  margin-right: 1rem;
+  flex-shrink: 0;
+  transition: var(--transition-smooth);
+  opacity: 0.8;
+}
+
+.timeline-step:hover .timeline-card-icon {
+  background: rgba(200, 169, 106, 0.1);
+  border-color: rgba(200, 169, 106, 0.4);
+  color: var(--accent-warm);
+  opacity: 1;
+  box-shadow: 0 0 16px rgba(200, 169, 106, 0.15);
+}
+
+.timeline-card-content {
+  flex: 1;
+}
+
+.timeline-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-num {
+  font-family: var(--font-heading);
+  color: var(--accent-warm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.timeline-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.2px;
+}
+
+.timeline-card-desc {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0;
+  font-weight: 300;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.financing .reveal-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.financing .reveal-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s,
+              transform 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.2s;
+}
+
+.financing .reveal-left.revealed,
+.financing .reveal-right.revealed {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 992px) {
+  .financing-inner {
+    min-height: auto;
+    padding: 4rem 0;
+  }
+
+  .financing-header {
+    margin-bottom: 3rem;
+  }
+
+  .financing-main-title {
+    font-size: 2rem;
+  }
+
+  .financing-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .financing-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .financing-left {
+    text-align: center;
+    align-items: center;
+  }
+
+  .financing-info-title {
+    font-size: 1.8rem;
+  }
+
+  .financing-divider {
+    margin: 0 auto 1.5rem;
+  }
+
+  .financing-paragraphs p {
+    font-size: 0.9rem;
+  }
+
+  .financing-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 2rem;
+    font-size: 0.85rem;
+    align-self: stretch;
+  }
+
+  .financing-features {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .feature-item {
+    text-align: left;
+  }
+
+  .financing-timeline {
+    padding-left: 0;
+  }
+
+  .timeline-line {
+    left: 10px;
+  }
+
+  .timeline-dot-wrapper {
+    margin-right: 1rem;
+    width: 20px;
+    height: 20px;
+  }
+
+  .timeline-dot {
+    width: 6px;
+    height: 6px;
+  }
+
+  .timeline-card {
+    padding: 1rem 1.2rem;
+    border-radius: 12px;
+  }
+
+  .timeline-card-icon {
+    width: 38px;
+    height: 38px;
+    margin-right: 0.8rem;
+  }
+
+  .timeline-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeline-card-title {
+    font-size: 0.95rem;
+  }
+
+  .timeline-card-desc {
+    font-size: 0.78rem;
+  }
+
+  .financing-kicker {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+
+  .financing-kicker::before,
+  .financing-kicker::after {
+    width: 25px;
+  }
+
+  /* Fade up on mobile */
+  .financing .reveal-left,
+  .financing .reveal-right {
+    transform: translateY(30px);
+    transition-delay: 0s;
+  }
+
+  .financing .reveal-left.revealed,
+  .financing .reveal-right.revealed {
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .financing-inner {
+    padding: 3rem 0;
+  }
+
+  .financing-main-title {
+    font-size: 1.7rem;
+  }
+
+  .financing-features {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .feature-item {
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+}
