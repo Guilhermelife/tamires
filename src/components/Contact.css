@@ -381,3 +381,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .contact-title {
+    font-size: 1.85rem;
+  }
+  
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+}

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Building2, ChevronDown } from 'lucide-react';
 import './Hero.css';
 
 const Hero: React.FC = () => {
@@ -19,10 +20,7 @@ const Hero: React.FC = () => {
       ref={heroRef}
     >
       {/* Ken Burns animated background */}
-      <div 
-        className="hero-bg" 
-        style={{ backgroundImage: `url('/capawebsite.svg')` }}
-      ></div>
+      <div className="hero-bg"></div>
 
       {/* Gradient overlay — left dark → right transparent */}
       <div className="hero-overlay"></div>
@@ -39,17 +37,17 @@ const Hero: React.FC = () => {
             <span className="hero-title-line">forma a <em className="hero-title-serif">sonhos</em> e </span>
             <span className="hero-title-line">solidez ao seu <em className="hero-title-serif">futuro</em></span>
           </h1>
+          
+          <div className="hero-title-separator"></div>
 
           <p className="hero-subtitle">
-            Arquitetura que Transforma Fé e Sonhos em <strong>Realidade Patrimonial</strong>
+            Arquitetura que transforma fé e sonhos em <strong>realidade patrimonial.</strong>
           </p>
 
           <div className="hero-actions">
             <a href="#financing" className="hero-cta">
+              <Building2 size={18} strokeWidth={1.5} className="hero-cta-icon" />
               <span>Iniciar meu projeto financiado</span>
-              <svg className="hero-cta-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-              </svg>
             </a>
           </div>
 
@@ -60,8 +58,9 @@ const Hero: React.FC = () => {
 
       {/* Scroll down indicator — mobile + desktop */}
       <div className={`hero-scroll-hint ${loaded ? 'hero-scroll-hint--visible' : ''}`}>
-        <span className="hero-scroll-text">Deslize</span>
-        <div className="hero-scroll-line"></div>
+        <ChevronDown size={20} className="hero-scroll-chevron" strokeWidth={1.5} />
+        <span className="hero-scroll-text">D E S L I Z E</span>
+        <div className="hero-scroll-line" style={{ display: 'none' }}></div>
       </div>
     </section>
   );

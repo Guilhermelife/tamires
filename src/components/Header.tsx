@@ -29,6 +29,7 @@ const Header: React.FC = () => {
             <li><a href="#about" onClick={toggleMenu}>A Arquiteta</a></li>
             <li><a href="#financing" onClick={toggleMenu}>Financiamento</a></li>
             <li><a href="#portfolio" onClick={toggleMenu}>Portfólio</a></li>
+            <li><a href="#faq" onClick={toggleMenu}>FAQ</a></li>
             <li><a href="#contact" onClick={toggleMenu}>Contato</a></li>
           </ul>
         </nav>
