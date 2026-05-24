@@ -75,4 +75,30 @@
 }
 
 
-/* Mobile media queries removed — fixed 1280px desktop viewport */
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+  
+  .footer-brand {
+    align-items: center;
+  }
+  
+  .footer-links ul, .footer-social ul {
+    align-items: center;
+  }
+  
+  .footer h4 {
+    font-size: 0.85rem;
+  }
+  
+  .footer-links a:hover, .footer-social a:hover {
+    padding-left: 0;
+  }
+  
+  .footer-bottom {
+    font-size: 0.75rem;
+  }
+}

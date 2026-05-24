@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { X, ZoomIn } from 'lucide-react';
+import { X, ZoomIn, ArrowRight } from 'lucide-react';
 import './Portfolio.css';
 
 const projects = [
@@ -164,10 +164,18 @@ const Portfolio: React.FC = () => {
                 </div>
                 {/* Mobile glassmorphism label — always visible */}
                 <div className="portfolio-label">
-                  <span className="portfolio-label-text">{project.title}</span>
+                  <div className="portfolio-label-content">
+                    <span className="portfolio-label-title">{project.title}</span>
+                    <span className="portfolio-label-category">{project.category}</span>
+                  </div>
+                  <ArrowRight size={20} className="portfolio-label-arrow" strokeWidth={1.5} />
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="portfolio-footer">
+            <button className="portfolio-view-all">VER TODOS OS PROJETOS &nbsp;&nbsp;&rarr;</button>
           </div>
 
         </div>

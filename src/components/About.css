@@ -270,6 +270,10 @@
    RESPONSIVE — MOBILE (Luxury Flow)
    ============================================================ */
 @media (max-width: 992px) {
+  .about-inner {
+    padding: 4rem 0;
+  }
+  
   .about-container {
     display: flex;
     flex-direction: column;
@@ -286,8 +290,9 @@
   }
   
   .about-image-wrapper {
-    margin: 2.5rem 0;
+    margin: 2rem 0;
     width: 100%;
+    position: relative;
   }
   
   .about-image {
@@ -296,18 +301,21 @@
     object-position: center 15%;
     border-radius: 20px; 
     width: 100%;
-    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   }
   
   .about-experience-badge {
-    bottom: 24px;
+    bottom: 20px;
     right: 50%;
     transform: translateX(50%);
     width: 85%;
     max-width: 320px;
-    padding: 1.2rem;
-    border: 1px solid rgba(200, 169, 106, 0.25);
+    padding: 1rem 1.5rem;
+    flex-direction: row;
+    gap: 0.75rem;
+    border: 1px solid rgba(200, 169, 106, 0.2);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    background: rgba(8, 8, 8, 0.85);
   }
 
   .badge-number {
@@ -315,34 +323,47 @@
   }
 
   .badge-text {
-    font-size: 0.55rem;
+    font-size: 0.6rem;
+    margin-top: 0;
+    letter-spacing: 2.5px;
   }
   
   .about-title {
     font-size: 2.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .about-kicker {
+    margin-bottom: 0.8rem;
   }
   
   .about-quote {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     padding-left: 1.5rem;
     line-height: 1.8;
+    margin: 1.5rem 0;
+    color: rgba(255, 255, 255, 0.65);
   }
   
   .about-text p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.85;
-    margin-bottom: 1.2rem;
+    margin-bottom: 0.8rem;
+    color: rgba(255, 255, 255, 0.55);
   }
   
   .about-cta-wrapper {
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    margin-top: 1.5rem;
   }
   
   .about-btn {
     width: 100%;
+    font-size: 1rem;
+    padding: 1.2rem;
+    border-radius: 14px;
   }
   
   .reveal-left, .reveal-right {
@@ -357,6 +378,15 @@
 
 @media (max-width: 480px) {
   .about-title {
-    font-size: 2.5rem;
+    font-size: 2.3rem;
+  }
+  
+  .about-quote {
+    font-size: 1rem;
+    padding-left: 1.2rem;
+  }
+  
+  .about-text p {
+    font-size: 0.92rem;
   }
 }

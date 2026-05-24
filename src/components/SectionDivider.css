@@ -1,0 +1,30 @@
+.section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem 0; /* Large vertical spacing */
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.6; /* Low opacity */
+}
+
+.divider-line {
+  flex-grow: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 169, 106, 0.3), transparent);
+}
+
+.divider-logo {
+  color: var(--accent-warm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .section-divider {
+    padding: 1.5rem 2rem;
+  }
+}

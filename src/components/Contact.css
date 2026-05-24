@@ -339,42 +339,81 @@
    RESPONSIVE — MOBILE (Luxury Flow)
    ============================================================ */
 @media (max-width: 992px) {
+  /* Layout — single column */
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 4rem;
+    gap: 3rem;
   }
-  
+
+  .contact-header {
+    margin-bottom: 3rem;
+  }
+
   .contact-title {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
   }
-  
+
+  /* Form inputs — larger tap targets & soft glass bg */
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    min-height: 56px;
+    font-size: 1rem;
+    padding-left: 1.25rem;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  /* Stack form rows on mobile */
   .form-row {
     grid-template-columns: 1fr;
   }
-  
-  .contact-form input,
-  .contact-form select,
-  .contact-form textarea {
-    min-height: 56px; /* h-14 */
-    font-size: 1rem;
-    padding-left: 1.25rem;
-  }
-  
+
+  /* Submit CTA — full-width premium button */
   .submit-btn {
-    min-height: 56px; /* h-14 */
     width: 100%;
+    min-height: 56px;
     justify-content: center;
+    background: #e8d8c8;
+    color: #1a1a1a;
+    border-radius: 14px;
+    font-weight: 600;
+    font-size: 1rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
-  
+
+  .submit-btn:hover {
+    background: #fff;
+    color: #1a1a1a;
+  }
+
+  /* Contact info items — better readability & tap targets */
+  .contact-item {
+    min-height: 48px;
+    padding: 1rem 1.25rem;
+  }
+
+  .contact-item h4 {
+    font-size: 0.9rem;
+  }
+
+  .contact-item p {
+    font-size: 0.92rem;
+  }
+
+  /* Map wrapper — softer radius */
   .contact-map-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
     margin-top: 2rem;
   }
-  
+
+  /* Reveal animations — vertical slide for mobile scroll */
   .contact .reveal-left,
   .contact .reveal-right {
     transform: translateY(30px);
   }
-  
+
   .contact .reveal-left.revealed,
   .contact .reveal-right.revealed {
     transform: translateY(0);
@@ -385,8 +424,12 @@
   .contact-title {
     font-size: 1.85rem;
   }
-  
+
   .contact-form-container {
     padding: 1.5rem;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
   }
 }

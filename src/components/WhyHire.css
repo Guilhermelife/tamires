@@ -269,8 +269,9 @@
   }
 
   .why-hire-paragraphs p {
-    font-size: 1rem;
+    font-size: 0.95rem;
     line-height: 1.85;
+    color: rgba(255, 255, 255, 0.55);
   }
 
   .why-hire-cta {
@@ -278,12 +279,14 @@
     text-align: center;
     background-color: #e8d8c8;
     color: #1a1a1a;
-    border-radius: 12px;
+    border-radius: 14px;
     padding: 1.2rem;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
   }
   
   .why-hire-cta:hover {
@@ -293,7 +296,7 @@
 
   .why-hire-image-col {
     width: 100%;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
   }
 
   .why-hire-img-wrapper {
@@ -305,6 +308,7 @@
     height: auto;
     aspect-ratio: 4 / 5;
     border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
   }
   
   .why-hire .reveal-left, 
@@ -322,5 +326,9 @@
 @media (max-width: 480px) {
   .why-hire-title {
     font-size: 2.2rem;
+  }
+  
+  .why-hire-paragraphs p {
+    font-size: 0.92rem;
   }
 }
